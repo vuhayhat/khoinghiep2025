@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Dự Án 360°</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gradient-bg"></div>
+    <div class="cube-container">
+        <div class="cube-hotspots">
+            <button class="cube-hotspot" data-face="profile">👤<span class="label">Giới thiệu bản thân</span></button>
+            <button class="cube-hotspot" data-face="product">📦<span class="label">Giới thiệu sản phẩm</span></button>
+            <button class="cube-hotspot" data-face="demo">🚀<span class="label">Demo sản phẩm</span></button>
+            <button class="cube-hotspot" id="share-btn">🔗<span class="label">Chia sẻ link</span></button>
+        </div>
+        <div class="cube-3d" id="cube3d">
+            <div class="cube-face face-profile">
+                <h2>👤 Giới thiệu bản thân</h2>
+                <ul class="profile-info-list">
+                    <li class="profile-info-item">
+                        <span class="profile-info-label"><span class="profile-info-icon">🧑</span>Họ tên:</span>
+                        <span class="profile-info-value">Nguyễn Hoàng Vũ</span>
+                    </li>
+                    <li class="profile-info-item">
+                        <span class="profile-info-label"><span class="profile-info-icon">📞</span>SĐT:</span>
+                        <span class="profile-info-value"><a href="tel:0825280204">0825280204</a></span>
+                    </li>
+                    <li class="profile-info-item">
+                        <span class="profile-info-label"><span class="profile-info-icon">🌐</span>Facebook:</span>
+                        <span class="profile-info-value"><a href="https://www.facebook.com/nguyen.hoang.vu.183937" target="_blank" rel="noopener">Facebook cá nhân</a></span>
+                    </li>
+                    <li class="profile-info-item">
+                        <span class="profile-info-label"><span class="profile-info-icon">✉️</span>Email:</span>
+                        <span class="profile-info-value"><a href="mailto:vuhayhatmtp@email.com">vuhayhatmtp@email.com</a></span>
+                    </li>
+                    <li class="profile-info-item">
+                        <span class="profile-info-label"><span class="profile-info-icon">💼</span>Vai trò:</span>
+                        <span class="profile-info-value">Founder & CEO</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cube-face face-product">
+                <h2>📦 Giới thiệu sản phẩm</h2>
+                <p><strong>Tên sản phẩm:</strong> TMĐT Lào</p>
+                <h3>🎯 Tính Năng Nổi Bật</h3>
+                <ul style="padding-left: 18px;">
+                    <li><strong>🌍 Đa Ngôn Ngữ (i18n):</strong> Hỗ trợ tiếng Việt 🇻🇳, Anh 🇬🇧, Lào 🇱🇦. Tự động phát hiện ngôn ngữ trình duyệt hoặc chọn tay. Nội dung chuyển đổi linh hoạt, lưu dữ liệu theo key bản dịch hoặc song ngữ.</li>
+                    <li><strong>🛒 Trang Bán Hàng Cá Nhân:</strong> Tạo trang riêng: <code>/user/ten_shop</code> hoặc <code>/store/abc_shop</code>. Gồm mô tả, avatar, sản phẩm, đánh giá, chia sẻ mạng xã hội.</li>
+                    <li><strong>📝 Đăng Ký Shop:</strong> Người dùng tạo tài khoản, đăng ký shop. Hệ thống tạo bảng PostgreSQL riêng cho shops, shop_products,... Gán quyền quản trị shop.</li>
+                    <li><strong>📦 Quản Lý Sản Phẩm:</strong> Thêm/sửa/xoá sản phẩm, trạng thái: "Đang bán", "Hết hàng", "Ẩn". Mô tả đa ngôn ngữ. Chỉnh ảnh bằng AI: remove.bg, nền trắng, watermark.</li>
+                    <li><strong>💳 Giỏ Hàng & Thanh Toán:</strong> Giỏ hàng đa ngôn ngữ. Thanh toán qua PayPal (mở rộng: Stripe, Momo, VNPay…). Theo dõi đơn hàng, giao hàng.</li>
+                    <li><strong>🔐 Bảo Mật & Phân Quyền:</strong> Xác thực JWT hoặc session. Phân quyền Người bán/Admin. Logging & chống brute-force.</li>
+                    <li><strong>📊 AI Phân Tích Sản Phẩm:</strong> Tạo mô tả tự động bằng Gemini API, gợi ý từ khóa SEO, phân tích hình ảnh, đề xuất mặt hàng nên bán tiếp.</li>
+                    <li><strong>⚙️ Cấu Hình Hệ Thống:</strong> File config.js riêng cho frontend/backend. Có .env nhưng không phụ thuộc. Dễ deploy, chia môi trường rõ ràng: dev/staging/production.</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>📌 Ghi chú:</strong> Dự án hỗ trợ mở rộng SaaS, tích hợp CMS, chatbot, ví nội địa. Giao diện responsive, tối ưu mobile.</p>
+            </div>
+            <div class="cube-face face-demo">
+                <h2>🚀 Demo sản phẩm</h2>
+                <div class="demo-embed" style="display: flex; align-items: center; justify-content: center; height: 100px; background: none; box-shadow: none;">
+                    <a href="https://shoplao.vercel.app/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 24px; background: linear-gradient(120deg, #7f8cff 60%, #43e97b 100%); color: #fff; font-size: 1.15rem; font-weight: 700; text-decoration: none; box-shadow: 0 2px 16px #7f8cff33, 0 2px 8px rgba(0,0,0,0.10); transition: background 0.2s, box-shadow 0.2s;">
+                        <span style="font-size: 1.3em;">🌐</span> Xem Demo Sản Phẩm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Dự Án Khởi Nghiệp</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
