@@ -973,4 +973,24 @@ ul.info-card li {
         font-size: 1rem !important;
         margin-bottom: 2px !important;
     }
+}
+@media (max-width: 600px) {
+    .flip-card-demo {
+        width: 100vw;
+        min-width: 0;
+        margin: 12px 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .flip-card {
+        width: 98vw;
+        max-width: 320px;
+        height: 140px;
+        min-width: 0;
+    }
+    .flip-card-front, .flip-card-back {
+        font-size: 0.95rem;
+        padding: 10px 8px;
+        border-radius: 8px;
+    }
 } 
